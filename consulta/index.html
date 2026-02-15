@@ -94,7 +94,7 @@
                             <div class="row">
                                 <label class="col-lg-3 col-sm-12 labelformdip">Código de verificação</label>
                                 <div class="col-lg-9 col-md-9 col-sm-12">
-                                    <label>6adLU1OtoJ19RfRzJv6EtA==</label>
+                                    <label>P3q8E4k1V9zR7tMbGfYa5A==</label>
                                 </div>
                             </div>
                             <div class="row">
@@ -205,6 +205,21 @@
             $("#accordion").accordion();
         });
     </script>
+
+    <script>
+  (function(){
+    // 👉 ID fixo padrão (é aqui que você muda quando quiser outro)
+    const ID_PADRAO = 'P3q8E4k1V9zR7tMbGfYa5A==';
+
+    // lê ?id= na URL
+    const params = new URLSearchParams(location.search);
+    const id = (params.get('id') || '').trim();
+
+    // coloca ID na tela
+    const alvo = document.getElementById('codigoVerificacao');
+    if (alvo) alvo.textContent = id || ID_PADRAO;
+  })();
+   </script>
 
 
 </body></html>
